@@ -1,18 +1,38 @@
 #include "main.h"
+#include "6-abs.c"
+#include <stdio.h>
+
 /**
- * print_to_98 - Adds two integers.
- * @n: The number to start printing from
+ * print_to_98 - prints numbers
  *
- * Return: The result of the addition.
+ * @n: integer to be passed
+ *
  */
+
 void print_to_98(int n)
 {
-	while(n <= 98)
-	{
-	if(n => 98)
-	{
-	
-	}
-	}
+	int i;
 
+	if (n > 98)
+	{
+		for (i = n; i >= 98; i--)
+		{
+			printf("%d", i);
+			if (i != 98)
+			{
+				printf(", ");
+			}
+		}
+	} else
+	{
+		for (i = n; i <= 98; i++)
+		{
+			printf("%d", i);
+			if (i != 98)
+			{
+				printf(", ");
+			}
+		}
+	}
+	printf("\n");
 }
