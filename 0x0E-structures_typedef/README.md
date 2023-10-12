@@ -1,1 +1,1 @@
-This project focus on Struct and Typede
+this projects is based on structure and typedef
