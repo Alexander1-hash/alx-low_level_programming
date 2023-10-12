@@ -1,21 +1,25 @@
 #include "function_pointers.h"
 /**
- * array_iterator - executes a function given as a parameter
- * on each element of an array
+ * int_index - searches for an integer
  * @array: The array
- * @size: The size of the array
- * @action: The action to be performed on the array
- * Return: nothing
+ * @size: The number of elements in the array
+ * @cmp: a pointer to tge function to be used to compare variables
+ * Return: 0 or -1 depending on condition
  */
-void array_iterator(int *array, size_t size, void (*action)(int))
+int int_index(int *array, int size, int (*cmp)(int))
 {
-	size_t i;
+	int x, i;
 
-	if (array && action)
+	if (size > 0 && array && cmp)
 	{
 		for (i = 0; i < size; i++)
 		{
-			action(array[i]);
+			x = cmp(array[i]);
+			if (x)
+				break;
 		}
+		if (i < size)
+			return (i);
 	}
+	return (-1);
 }

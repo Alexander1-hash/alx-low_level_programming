@@ -1,1 +1,1 @@
-This project is a function pointer file
+This project consist of function pointers
